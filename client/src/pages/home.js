@@ -13,7 +13,7 @@ const Home = () => {
 
     const token = Cookies.get("token")
 
-    Axios.post(`http://localhost:3001/logout/${token}`).then((response) => {
+    Axios.post(`https://chat-forte.vercel.app/logout/${token}`).then((response) => {
 
       setLogoutID(response.data._id)
 
@@ -26,7 +26,7 @@ const Home = () => {
 
     try {
 
-      Axios.post(`http://localhost:3001/logoutUser/${logoutID}`)
+      Axios.post(`https://chat-forte.vercel.app/logoutUser/${logoutID}`)
 
        Cookies.remove("token")
       window.location.reload()
