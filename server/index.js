@@ -12,7 +12,7 @@ const secretKey = crypto.randomBytes(32).toString('hex');
 
 const io = require("socket.io")(3002, {
   cors: {
-    origin: ["http://localhost:3000"]
+    origin: ["https://chat-forte-w9mr.vercel.app"]
   }
 })
 
@@ -25,7 +25,7 @@ const Register = require("./model/register");
 
 app.use(
   cors({
-    origin: ["http://localhost:3000"],
+    origin: ["https://chat-forte-w9mr.vercel.app"],
     methods: ["POST, GET, DELETE, PUT"],
     credentials: true,
   })
