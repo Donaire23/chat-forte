@@ -6,7 +6,7 @@ import io from 'socket.io-client';
 
 const SwiperComponent = () => {
   
-  const socket = io("http://localhost:3002");
+  const socket = io("https://chat-forte.vercel.app");
   const [olUsers, setOlUsers] = useState([])
 
   useEffect(() => {
