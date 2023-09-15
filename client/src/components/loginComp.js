@@ -32,7 +32,7 @@ const LoginComponents = () => {
 
     try {
 
-          await  Axios.post("http://localhost:3001/loginUser", loginInfo).then( async(response) => {
+          await  Axios.post("https://chat-forte.vercel.app/loginUser", loginInfo).then( async(response) => {
 
 
                 const token = response.data.tok
@@ -43,7 +43,7 @@ const LoginComponents = () => {
 
                 }
         
-                await Axios.post("http://localhost:3001/accToken", accessToken).then( async(response) => {
+                await Axios.post("https://chat-forte.vercel.app/1/accToken", accessToken).then( async(response) => {
 
                   if(response.data.message === "Authorized") {
 
@@ -57,7 +57,7 @@ const LoginComponents = () => {
 
                         const userID = response.data.ID
     
-                        Axios.get(`http://localhost:3001/userData?id=${response.data.ID}`).then(async(response) => {
+                        Axios.get(`https://chat-forte.vercel.app/userData?id=${response.data.ID}`).then(async(response) => {
 
                           if(response.data.message === "User Found") {
 
